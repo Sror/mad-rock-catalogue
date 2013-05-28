@@ -72,7 +72,7 @@ overflow: hidden;
     -moz-transform:translate3d(0px,0,0);
     height: 100%;
     /*padding: 20px;*/
-    margin: 10px;/*my addition*/
+    /*margin: 10px;/*my addition*/
     /*border: 2px solid white;*//*border seems to disrupt widths and makes last slide disappear*/
     background-color: black;/*my addition*/
 }
@@ -102,7 +102,7 @@ display: inline-block;
     bottom:0px;/*was bottom:50px - my change*//*having a higher bottom position means that the scroll area allows the text to go a little above the 0 bottom position*/
     left:0px;
     right:0px;
-    overflow:hidden;/*was overflow:auto;*/
+    /*overflow:hidden;/*was overflow:auto;*/
 }
 
 .scroller {
@@ -116,6 +116,7 @@ display: inline-block;
 .content_text
 {
 width: 95%;
+height:auto;
 position: relative;
 color: white;
 background-color: rgba(0,0,0,0.8);
@@ -131,15 +132,32 @@ margin: 10px;
 padding: 10px;
 }
 
+/* Hidden Content*/
+.hidden_content
+{
+display:none;
+}
+
 /*Products*/
 .product_list
 {
 list-style: none;
-line-height: 100px;
+/*line-height: 100px;*/
 }
 .product_list>li
 {
 margin: 5px;
+border: 1px solid white;
+}
+.product_li_container
+{
+height: 100px;
+overflow: hidden;
+}
+.product_li_text
+{
+font-size: 40px;
+display: inline-block;
 }
 .product_img
 {
@@ -160,25 +178,10 @@ display: none;
 .product_details
 {
 color: white;
-background-color: rgba(0,0,0,0.5);
-}
-/*
-.product_container_div
-{
-width:100%;
-overflow:hidden;
-}
-.product_text
-{
-height: 100px;
+background-color: rgba(0,0,0,0.9);
 padding: 10px;
-text-align:center;
-max-width:50%;
-overflow:hidden;
-display:inline-block;
-float:left;
 }
-*/
+
 
 /*Image & Cover Handling*/
 .cover_img_container
@@ -214,6 +217,8 @@ color: black;
 .supp_img_container
 {
 width: 100%;
+height: 150;/*250px;/*this needs to be set so that page scrolls to bottom*/
+display:inline-block;
 overflow: hidden;
 }
 .supp_img

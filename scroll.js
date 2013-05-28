@@ -12,14 +12,25 @@ var $cover_img_container = $('.cover_img_container');
 $cover_img_container.css('width', $(window).width());
 $cover_img_container.css('height', $(window).height());
 
+// Loading external html files
+
+var external_files_to_load = ['shoe_details.html'];
+    for (var i = 0; i < external_files_to_load.length; i++) {
+        var current_file = external_files_to_load[i];
+        var html_to_append = req(current_file);
+        $('.hidden_content').append(html_to_append);
+    };
+
 //Handling product clicks
 //var $product_li = $('.product_list').children('li');
 $('body').on('tap click', '.product_img', function(){
-    var product_id = $(this).parent('li').attr('id');
-    $('#'+product_id+'_details').show();
+    var product_id = $(this).parent('div').parent('li').attr('id');
+    $('.hidden_content').show();//show parent div
+    $('#'+product_id+'_details').show();// show relevant child div
 });
 $('body').on('tap click', '.product_overlay', function(){
-    $('.product_overlay').hide();
+    $('.product_overlay').hide();//hide relevant child div
+     $('.hidden_content').hide();//hide parent div
 });
 
 
@@ -81,7 +92,7 @@ function updateLayout() {
     wrapperWidth = $('#pageWrapper').width();
 
     $('#pageScroller').css('width', wrapperWidth * 11);
-    $('.page').css('width', wrapperWidth - 20);//was - 40 // working out the .page width its simply the wrapper width - the padding and margins I think
+    $('.page').css('width', wrapperWidth - 0);//was -20 with margin 10 on .page //was - 40 with padding 20 // working out the .page width its simply the wrapper width - the padding and margins I think
     myScroll.refresh();
     myScroll.scrollToPage(currentPage, 0, 0);
 
@@ -99,5 +110,24 @@ page8Scroll = new iScroll('wrapper_pg8', {hScrollbar: false, vScrollbar: true, l
 /*SPRITESPIN*/
     
 });
+
+
+function req(file_name){
+    var request = new XMLHttpRequest();
+    
+    var response_html = 'error'
+    
+    request.open("GET", file_name, false);/* changed to async = false */
+    request.onreadystatechange = function(){
+        if (request.readyState == 4) {
+            if (request.status == 200 || request.status == 0) {
+                console.log("response " + request.responseText);
+                response_html = request.responseText;
+            }
+        }
+    };
+        request.send();
+        return response_html
+};
 
 
