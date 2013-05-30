@@ -12,7 +12,15 @@ var $cover_img_container = $('.cover_img_container');
 $cover_img_container.css('width', $(window).width());
 $cover_img_container.css('height', $(window).height());
 
-// Loading external html files
+// Loading external html files -- moved to external js file
+/*
+var pages_to_load = ['1.html'];
+    for (var i = 0; i < pages_to_load.length; i++) {
+        var current_file = pages_to_load[i];
+        var html_to_append = req(current_file);
+        $('#wrapper_pg1').children('.scroller').html(html_to_append);
+    };
+
 
 var external_files_to_load = ['shoe_details.html'];
     for (var i = 0; i < external_files_to_load.length; i++) {
@@ -20,6 +28,8 @@ var external_files_to_load = ['shoe_details.html'];
         var html_to_append = req(current_file);
         $('.hidden_content').append(html_to_append);
     };
+*/
+
 
 //Handling product clicks
 //var $product_li = $('.product_list').children('li');
@@ -110,24 +120,5 @@ page8Scroll = new iScroll('wrapper_pg8', {hScrollbar: false, vScrollbar: true, l
 /*SPRITESPIN*/
     
 });
-
-
-function req(file_name){
-    var request = new XMLHttpRequest();
-    
-    var response_html = 'error'
-    
-    request.open("GET", file_name, false);/* changed to async = false */
-    request.onreadystatechange = function(){
-        if (request.readyState == 4) {
-            if (request.status == 200 || request.status == 0) {
-                console.log("response " + request.responseText);
-                response_html = request.responseText;
-            }
-        }
-    };
-        request.send();
-        return response_html
-};
 
 

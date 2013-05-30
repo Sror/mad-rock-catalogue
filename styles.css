@@ -3,6 +3,7 @@ body {
     background-color: #E7EAEC;
     margin:0;
     padding:0;
+    color: white;
 }
 
 .page h1,
@@ -66,16 +67,6 @@ height: 300px;
 width: 300px;
 overflow: hidden;
 }
-.page {
-    float: left;
-    -webkit-transform:translate3d(0,0,0);
-    -moz-transform:translate3d(0px,0,0);
-    height: 100%;
-    /*padding: 20px;*/
-    /*margin: 10px;/*my addition*/
-    /*border: 2px solid white;*//*border seems to disrupt widths and makes last slide disappear*/
-    background-color: black;/*my addition*/
-}
 
 .wrapper_span_360sprite2
 {
@@ -94,7 +85,7 @@ display: inline-block;
     /*padding: 20px;/*my addition*/
 }
 
-#wrapper_cover, #wrapper_pg1, #wrapper_pg2, #wrapper_products_cover, #wrapper_pg4, #wrapper_pg5, #wrapper_pg6, #wrapper_pg7, #wrapper_pg8
+#wrapper_pg0, #wrapper_pg1, #wrapper_pg2, #wrapper_products_cover, #wrapper_pg4, #wrapper_pg5, #wrapper_pg6, #wrapper_pg7, #wrapper_pg8
 {
     position:absolute;
     z-index:1;
@@ -103,13 +94,6 @@ display: inline-block;
     left:0px;
     right:0px;
     /*overflow:hidden;/*was overflow:auto;*/
-}
-
-.scroller {
-	position:absolute; z-index:1;
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
-	width:100%;
-	padding:0;
 }
 
 /*Content, body and text*/
@@ -147,23 +131,27 @@ list-style: none;
 .product_list>li
 {
 margin: 5px;
+padding: 10px;
 border: 1px solid white;
 }
-.product_li_container
+.product_img_container
 {
-height: 100px;
+width:100%
 overflow: hidden;
 }
 .product_li_text
 {
-font-size: 40px;
+font-size: 250%;
 display: inline-block;
 }
 .product_img
 {
-height: 100px;
-max-width: 30%;
-float:left;
+max-width: 50%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+clear:both;
+/*float:left;*/
 }
 .product_overlay
 {
@@ -197,7 +185,7 @@ left: 0px;
 width:100%;
 z-index: 3
 }
-
+/*
 .cover_text
 {
 position: absolute;
@@ -212,7 +200,7 @@ border-radius: 5px;
 {
 color: black;
 }
-
+*/
 
 .supp_img_container
 {
@@ -228,16 +216,264 @@ margin-left: auto;
 margin-right:auto;
 }
 
-
-#wrapper_pg1
-{
-background-image: url('imgs/media/background.png');
-}
-
 #pg_2_innovations
 {
 color:white;
 }
+
+
+/* PAGE 5 STYLES */
+
+#full_overlay
+{
+position: absolute;
+top: 0px;
+left: 0px;
+width:100%;
+height:100%;
+z-index: 101;
+background-color: rgba(0,0,0,0.5);
+}
+#overlay_content
+{
+position: absolute;
+top: 50px;
+left: 50px;
+z-index:102;
+background-color: rgba(0,0,0,0.9);
+}
+
+.page {
+    float: left;
+    -webkit-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0px,0,0);
+    height: 100%;
+    /*padding: 20px;*/
+    /*margin: 10px;/*my addition*/
+    /*border: 2px solid white;*//*border seems to disrupt widths and makes last slide disappear*/
+    background-color: black;/*my addition*/
+}
+
+
+/* #wrapper_pg5 included with the other wrapper divs */
+
+.scroller {
+	position:absolute;
+    z-index:1;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+	padding:0;
+}
+
+    /* for cover width and height see js */
+.cover
+{
+position:relative;
+top:0px;
+left:0px;
+overflow:hidden;/*need to crop image if this results in an obscured image*/
+}
+
+.cover>.cover_background
+{
+position:absolute;
+top:0px;
+left:0px;
+max-width: 100%;
+height:auto;
+z-index:-1;
+}
+.cover>.cover_logo/*all logos will be positioned in the same position*/
+{
+position: absolute;
+top:0px;
+left:0px;
+max-width: 50%;
+z-index:2;
+}
+.cover>.page_down
+{
+position: absolute;
+bottom:0px;
+right:0px;
+max-width: 10%;
+z-index:2;
+}
+
+.cover_block
+{
+position: absolute;
+top: 20%;
+left:0px;
+background-color: rgba(0,0,0,0.3);
+border-radius: 5px;
+z-index:3;
+}
+
+.cover_title
+{
+position: relative;
+color: white;
+z-index:3;
+}
+
+.cover_text
+{
+position: relative;
+}
+
+.title_l
+{
+font-size:3em;
+}
+.title_m
+{
+font-size:2em;
+}
+.title_s
+{
+font-size:1.5em;
+}
+.article
+{
+font-size: 1em;
+}
+.pullout_txt
+{
+font-size:2em;
+}
+.caption
+{
+font-size:0.75em;
+}
+
+.pull-left
+{
+float: left;
+}
+.pull-right
+{
+float:right;
+}
+/*image with definite width and height for webkit*/
+.wh_img/*can adjust height in % as necessary maybe copy new classes for diferent pages*/
+{
+    max-width:100%;
+    height: 25%;
+}
+
+.margin-center
+{
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+.txt-center
+{
+text-align:center;
+}
+.txt-right
+{
+text-align:right;
+}
+.txt-left
+{
+text-align:left;
+}
+
+.space_top
+{
+margin-top: 2em;
+}
+.space_bottom
+{
+margin-bottom: 2em;
+}
+
+    /*colors*/
+.orange
+{
+background-color: #FF8400;
+}
+.blue
+{
+background-color: #7979E0;
+}
+.green
+{
+background-color: #6BDB5C;
+}
+.red
+{
+background-color: #E33059;
+}
+.pink
+{
+background-color: #F56788;
+}
+
+.fullw_large
+{
+max-width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+height: 300px;
+display: block;
+}
+.fullw_medium
+{
+max-width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+height: 200px;
+display: block;
+}
+.fullw_small
+{
+max-width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+height: 100px;
+display: block;
+}
+.fullw_auto
+{
+max-width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+height: auto;
+display: block;
+clear: both;
+}
+.fullw_auto>img
+{
+max-width: 100%;
+}
+.fullw_auto>p
+{
+padding: 2%;
+}
+.col_left
+{
+width: 42.5%;
+height: 90%;
+margin-left:5%;
+margin-right: 2.5%;
+margin-top: 5%;
+margin-bottom: 5%;
+float: left;
+}
+.col_right
+{
+width: 42.5%;
+height: 90%;
+margin-left:2.5%;
+margin-right: 5%;
+margin-top: 5%;
+margin-bottom: 5%;
+float: left;
+}
+
 
 
 

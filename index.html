@@ -6,11 +6,17 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     
     
-    <script src="jquery-1.7.2.min.js" type="text/javascript"></script>
-    <!--<script src="zeptomin.js"></script>-->
+    <!--<script src="jquery-1.7.2.min.js" type="text/javascript"></script>-->
+    <script src="zeptomin.js"></script>
     <!--<script src="spritespin.js" type="text/javascript"></script>-->
+    
+    <script src="file_loading.js"></script><!-- loading external files like html files, should be placed before page dimensions are calculated -->
+    <script src="dynamic_content.js"></script><!-- load dynamic content so place script after files are loaded but before styles and before iscroll and widgets are loaded -->
+    <script src="dynamic_styles.js"></script><!-- changing scroller dimensions so should appear before iscroll initialization but after loading external files -->
+    
     <script src="iscroll4.js"></script>
     <script src="scroll.js"></script>
+    
     
     
 </head>
@@ -21,226 +27,109 @@
         <div id="pageWrapper">
             <div id="pageScroller">
                 <div class="page" >
-                    <div id="wrapper_cover">
-                    
-                        <div class="cover_img_container">
-                            <img class="cover_img" src="imgs/media/welcome_to_rocklands.jpg"></img>
-                            
-                            <div class="cover_text">
-                                <img src="imgs/media/madrock_logo.png"></img><br>
-                                <h2>Mobile Catalogue 2013</h2>
-                            </div>
-                            
-                        </div>
-                    
+                    <div id="wrapper_pg0">
                     </div>
-                    
                 </div>
 
                 <div class="page" >
                     <div id="wrapper_pg1">
-                        <div class="scroller">
-                            
-                            <div class="cover_img_container">
-                                <img class="cover_img" src="imgs/media/madrock_blueprint.png"></img>
-                                
-                                <div class="cover_text">
-                                    <img src="imgs/media/madrock_logo.png"></img><br>
-                                    <h2>About Us</h2>
-                                </div>
-                                
-                            </div>
-                            <div class="content_text">
-                                <p>
-                                Mad Rock began in 2002 as a small, climber owned and operated company that made innovative, highly technical and affordable rock climbing shoes. After many years and over a million pairs later, we still choose not to reflect on our accomplishments nor rest on our laurels-because our best shoes will always be the next batch! To us, "Innovation" isn't just a catch phrase-it's a challenge to be met daily. In that spirit, we embrace using the latest materials and technology to meet consumer demands while maintaining the high quality and innovative products that have put us on the map and in the packs of climbers around the world!
-                                </p>
-                                <p>
-                                Refinement of an existing design can often be as labor intensive as creating an all-new one. Yet instead of making new models for the sake of making new models, for 2013 Mad Rock is committed to making subtle but definite running improvements to our existing shoe models and offering a variety of new features, colors and options to our increasingly popular hardware and accessory lines. Mad Rock's goal from the start has been to offer the most sophisticated designs and materials at a fair price, and now more than ever our message of value, quality, durability and climbing enjoyment rings true - so much so that our competitors are increasingly following our lead. We always thought that climbing should be enjoyed by everybody - and we aim to do that with the best gear at a fair price. For 2013 and beyond, Mad Rock is committed to offering you a great deal on the best equipment and back it up with the best customer service in the business.
-                                </p>
-                                </br>
-                                -Team Mad Rock
-
-                            </div>
-                            
-                        </div>
                     </div>
                 </div>
                 <div class="page" >
                     <div id="wrapper_pg2">
-                        <div class="scroller">
-                            
-                            <div class="cover_img_container">
-                                
-                                <img class="cover_img" src="imgs/media/shock-gel.jpg"></img>
-                                
-                                <div class="cover_text">
-                                    <img src="imgs/media/madrock_logo.png"></img><br>
-                                    <h2 id="pg_2_innovations">Innovations</h2>
-                                </div>
-                                
-                            </div>
-                            <div class="content_text">
-                                <h3>Arch Flex</h3>
-                                <div class="supp_img_container"><img class="supp_img" src="imgs/media/arch-flex.jpg"></img></div>
-                                <p>
-                                    By utilizing our 1.8mm R2 rand rubber, the Arch Flex system gives our redesigned Shark an unbelievably comfortable and glove-like fit. The elastic property in our R2 formula hugs and locks your foot in to place without the pain associated with other high performance shoes. 
-                                </p>
-                                <h3>3D Moulded Heel</h3>
-                                <div class="supp_img_container"><img class="supp_img" src="imgs/media/heelcup3dmouldedheel.jpg"></img></div>
-                                <p>
-                                    Introducing, the best hooking heel ever created. With help from our team of athletes around the world, we've designed a heel cup that will hook, smear, jam, or lock better than any other heel design out there. Our new 3D Molded Heel Cup features grooves to improve hooking ability and ensures that your heel won't pop off of your project. As with any of our other features, we never skimp on materials by manufacturing with non-climbing grade rubber. 
-                                </p>
-                                <h3>Shock Gel</h3>
-                                <div class="supp_img_container"><img class="supp_img" src="imgs/media/shock-gel.jpg"></img></div>
-                                <p>
-                                    The Flash 2.0 is the first climbing shoe on the market to incorporate shock gel to reduce the force of impact on the heel. 
-                                </p>
-                                <h3>3D Moulded Concave Sole</h3>
-                                <div class="supp_img_container"><img class="supp_img" src="imgs/media/concavesole.jpg"></img></div>
-                                <p>
-                                    With a patented, concave shape, this sole offers even more powerful edging and surface contact while smearing. Featured on the Shark, Con Series and the Demon; the 3D molded concave shape will enable your feet to grab holds like never before. 
-                                </p>
-                                <h3>Polycarbonate Midsole</h3>
-                                <div class="supp_img_container"><img class="supp_img" src="imgs/media/Polycarbonate-Midsole.jpg"></img></div>
-                                <p>
-                                    Our AES midsoles utilizes 3D molded polycarbonate material to maintains its shape throughout the life of the shoe. It also provides a predictable and consistent flex throughout its lifespan without sacrificing sensitivity. Due to its stiffness, we were able to incorporate this new midsole material in conjunction with our 3D molded rubber sole to increase performance and stability while minimizing the thickness of both. Our AES consists of 3 midsole shapes to control flex and edging. 
-                                </p>
-                                <h3>3D Toecap</h3>
-                                <div class="supp_img_container"><img class="supp_img" src="imgs/media/3d-toe-cup.jpg"></img></div>
-                                <p>
-                                    Another technological first in our industry. The 3D molded Toe Cap eliminates the seam where de-lamination can occur while providing an extra layer of protection for durability. The sticky grey rubber is a good indicator of when resoling will be needed as the black rand rubber below begins to show and helps to prevent marks on climbing surfaces. 
-                                </p>
-                                <h3>Power Flex Upper</h3>
-                                <div class="supp_img_container"><img class="supp_img" src="imgs/media/power-upper.jpg"></img></div>
-                                <p>
-                                    Through the use of our new rubber impregnation technology, the Power Flex Upper is thin, light, sensitive and ultra sticky. The two-way stretch characteristic of our material provides more room in the toe box while reducing lateral strech when worn. 
-                                </p>
-                                <h3>Slide Entry System</h3>
-                                <div class="supp_img_container"><img class="supp_img" src="imgs/media/Side-Entry-System.jpg"></img></div>
-                                <p>
-                                    Moving the shoe closure to the side provides greater surface area coverage for our new Power Upper. Whether you are toe hooking, jamming, or smearing, our rock shoes have you covered.
-                                </p>
-                                </br>
-                                -Mad Rock Lab
-                                </br>
-                            </div>
-                            
-                        </div>
+                        
                     </div>
                 </div>
                 
                 <div class="page" >
-                    <div id="wrapper_products_cover">
-                        <div class="cover_img_container">
-                            <img class="cover_img" src="imgs/media/welcome_to_rocklands.jpg"></img>
-                            
-                            <div class="cover_text">
-                                <img src="imgs/media/madrock_logo.png"></img><br>
-                                <h2>Products 2013</h2>
-                            </div>
-                            
-                        </div>
+                    <div id="wrapper_pg3">
                     </div>
                 </div>
                 
                 <div class="page" >
                     <div id="wrapper_pg4">
-                        <div class="scroller">
-                            <div class="cover_img_container">
-                                
-                                <img class="cover_img" src="imgs/media/shoe_cover.jpg"></img>
-                                
-                                <div class="cover_text">
-                                    <img src="imgs/media/madrock_logo.png"></img><br>
-                                    <h2 id="pg_2_innovations">Shoes</h2>
-                                </div>
-                                
-                            </div>
-                            
-                            <div class="content_text">
-                                <ul class="product_list">
-                                    <li id="shoe_1">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/demon2USD123.jpg"><span class="product_li_text">Demon 2.0</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_2">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/shark2USD119.jpg"><span class="product_li_text">Shark 2.0</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_3">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/concept2USD109.jpg"><span class="product_li_text">Concept 2.0</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_4">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/conflict2USD109.jpg"><span class="product_li_text">Conflict 2.0</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_5">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/contact2USD105.jpg"><span class="product_li_text">Contact 2.0</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_6">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/mugentechlace2USD99.jpg"><span class="product_li_text">Mugen Tech Lace 2.0</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_7">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/mugentech2USD99.jpg"><span class="product_li_text">Mugen Tech 2.0</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_8">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/flash2USD83.jpg"><span class="product_li_text">Flash 2.0</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_9">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/onsightUSD79.jpg"><span class="product_li_text">Onsight</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_10">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/bansheeUSD79.jpg"><span class="product_li_text">Banshee</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_11">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/phoenixUSD75.jpg"><span class="product_li_text">Phoenix</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_12">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/drifterUSD69.jpg"><span class="product_li_text">Drifter</span>
-                                        </div>
-                                    </li>
-                                    <li id="shoe_13">
-                                        <div class="product_li_container">
-                                        <img class="product_img" src="imgs/shoes/madmonkeyUSD39.jpg"><span class="product_li_text">Mad Monkey</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                        </div>
                     </div>
                 </div>
                 <div class="page" >
                     <div id="wrapper_pg5">
                         <div class="scroller">
-                            <h1>Page 5</h1>
+                                <div class="cover orange">
+                                    <h1>Page 5</h1>
+                                </div>
+                                <div class="fullw_large blue"><!-- 100% width large height -->
+                                    LARGE
+                                </div>
+                                <div class="fullw_medium green"><!-- 100% width medium height -->
+                                    MEDIUM
+                                </div>
+                                <div class="fullw_small red"><!-- 100% width small height -->
+                                    SMALL
+                                </div>
+                                <div class="fullw_auto pink"><!-- 100% width auto height -->
+                                    AUTO
+                                    </br>
+                                    Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
+                                    Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
+                                </div>
+                                
+                                <div class="fullw_auto"><!-- use auto height full width container  -->
+                                    <div class="col_left orange">
+                                        <p>
+                                        Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
+                                        </p>
+                                    </div>
+                                    <div class="col_right blue">
+                                        <p>
+                                        Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="fullw_auto">
+                                    <img src="imgs/media/font_project.jpg"></img>
+                                </div>
+                                <div class="fullw_auto green">
+                                    <p>Paul Robinson on a project in Fontainbleau</p>
+                                </div>
+                                
+                                <div class="fullw_auto"><!-- use auto height full width container  -->
+                                    <div class="col_left orange">
+                                        <p>
+                                        Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
+                                        </p>
+                                    </div>
+                                    <div class="col_right blue">
+                                        <div class="fullw_auto red">
+                                            Sub A
+                                            <br>
+                                            A
+                                            <br>
+                                            A
+                                        </div>
+                                        <div class="fullw_auto green">
+                                            Sub B
+                                            <br>
+                                            B
+                                            <br>
+                                            B
+                                        </div>
+                                        <div class="fullw_auto orange">
+                                            Sub C
+                                            <br>
+                                            C
+                                            <br>
+                                            C
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fullw_auto pink">
+                                yoyo
+                                </div>
                         </div>
                     </div>
                 </div>
                 <div class="page" >
                     <div id="wrapper_pg6">
                         <div class="scroller">
-                            <h1>Page 6</h1>
                         </div>
                     </div>
                 </div>
