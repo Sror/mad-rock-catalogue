@@ -1,19 +1,12 @@
 $(document).ready(function(){
     
-    var num_pages = 5;
+    var num_pages = 7;
     for (var i = 0; i < num_pages; i++) {
         var html_to_append = req_page(i);
         $('#wrapper_pg'+i).html(html_to_append);
         console.log('#wrapper_pg'+i);
     };
 
-
-    /*var external_files_to_load = ['shoe_details.html'];
-    for (var i = 0; i < external_files_to_load.length; i++) {
-        var current_file = external_files_to_load[i];
-        var html_to_append = req(current_file);
-        $('.hidden_content').append(html_to_append);
-    };*///now dynamically loading popups one at a time using json see dynamic_content.js
 });
 
 

@@ -6,9 +6,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     
     
-    <!--<script src="jquery-1.7.2.min.js" type="text/javascript"></script>-->
-    <script src="zeptomin.js"></script>
-    <!--<script src="spritespin.js" type="text/javascript"></script>-->
+    <script src="jquery-1.7.2.min.js" type="text/javascript"></script>
+    <!--<script src="zeptomin.js"></script>-->
+    <script src="spritespin.js" type="text/javascript"></script>
     
     <script src="file_loading.js"></script><!-- loading external files like html files, should be placed before page dimensions are calculated -->
     <script src="dynamic_content.js"></script><!-- load dynamic content so place script after files are loaded but before styles and before iscroll and widgets are loaded -->
@@ -17,6 +17,8 @@
     <script src="iscroll4.js"></script>
     <script src="scroll.js"></script>
     
+    <script src="form_submit.js"></script><!-- loaded after scroll.js since it disables myScroll which is defined in scroll.js -->
+    <script src="rotator.js"></script>
     
     
 </head>
@@ -52,124 +54,27 @@
                 </div>
                 <div class="page" >
                     <div id="wrapper_pg5">
-                        <div class="scroller">
-                                <div class="cover orange">
-                                    <h1>Page 5</h1>
-                                </div>
-                                <div class="fullw_large blue"><!-- 100% width large height -->
-                                    LARGE
-                                </div>
-                                <div class="fullw_medium green"><!-- 100% width medium height -->
-                                    MEDIUM
-                                </div>
-                                <div class="fullw_small red"><!-- 100% width small height -->
-                                    SMALL
-                                </div>
-                                <div class="fullw_auto pink"><!-- 100% width auto height -->
-                                    AUTO
-                                    </br>
-                                    Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
-                                    Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
-                                </div>
-                                
-                                <div class="fullw_auto"><!-- use auto height full width container  -->
-                                    <div class="col_left orange">
-                                        <p>
-                                        Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
-                                        </p>
-                                    </div>
-                                    <div class="col_right blue">
-                                        <p>
-                                        Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="fullw_auto">
-                                    <img src="imgs/media/font_project.jpg"></img>
-                                </div>
-                                <div class="fullw_auto green">
-                                    <p>Paul Robinson on a project in Fontainbleau</p>
-                                </div>
-                                
-                                <div class="fullw_auto"><!-- use auto height full width container  -->
-                                    <div class="col_left orange">
-                                        <p>
-                                        Working off a similar design goal as the Onsight, the Banshee offers the same attributes and all-around performance as the Phoenix, but in a women's specific model. Using female lasts to ensure women a better fit than the unisex last of the Phoenix, the Banshee is also a lace-up to offer another degree of precise control. Round this out with subtle laser-etched graphics and an exclusive color palette to differentiate it from its counterpart, and you have a great all-day shoe with a superlative value-to-performance ratio.
-                                        </p>
-                                    </div>
-                                    <div class="col_right blue">
-                                        <div class="fullw_auto red">
-                                            Sub A
-                                            <br>
-                                            A
-                                            <br>
-                                            A
-                                        </div>
-                                        <div class="fullw_auto green">
-                                            Sub B
-                                            <br>
-                                            B
-                                            <br>
-                                            B
-                                        </div>
-                                        <div class="fullw_auto orange">
-                                            Sub C
-                                            <br>
-                                            C
-                                            <br>
-                                            C
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fullw_auto pink">
-                                yoyo
-                                </div>
-                        </div>
                     </div>
                 </div>
                 <div class="page" >
                     <div id="wrapper_pg6">
-                        <div class="scroller">
-                        </div>
                     </div>
                 </div>
                 <div class="page" >
                     <div id="wrapper_pg7">
-                        <div class="scroller">
-                            <h1>Page 7</h1>
-                        </div>
                     </div>
                 </div>
                 <div class="page" >
                     <div id="wrapper_pg8">
-                        <div class="scroller">
-                            <h1>Page 8</h1>
-                        </div>
                     </div>
                 </div>
                 
                 <!-- Contact FORM SUBMISSION -->
                 <div class="page" >
                     <div style="width:100%;text-align:center;">
-                        <h1>Contact PAge</h1>
+                        <h1>Contact Page 2</h1>
                         <hr/>
                         <button class="button_popup">Click to submit form</button>
-                        <div id="form_popup">
-                            <div id="form_well">
-                            
-                                <form action="/pg_request" method="post" id="pg_request_form">
-                                    <label for="email">
-                                        <b>Email</b>
-                                        <input type="email" id="pg_email" name="email">
-                                    </label>
-                                    <input type="submit" value="submit">
-                                </form>
-                                
-                            </div>
-                            <div id="form_close">
-                                HIDE
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!-- FORM SUBMISSION -->
@@ -182,7 +87,7 @@
         </div><!-- Page Wrapper -->
 
     </div><!-- Frame -->
-    
+<!--    
 <div id="form_popup">
     <div id="form_overlay">
     </div>
@@ -198,7 +103,7 @@
 
     </form>
     </div>
-</div>
+</div>-->
     
     <!-- Product Overlays -->
     <div class="hidden_content">

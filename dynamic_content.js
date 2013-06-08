@@ -58,4 +58,16 @@ $(document).ready(function(){
         $('#overlay_content').remove();
     });
     
+    //Handling product clicks
+    //var $product_li = $('.product_list').children('li');
+    $('body').on('tap click', '.product_img', function(){
+        var product_id = $(this).parent('div').parent('li').attr('id');
+        $('.hidden_content').show();//show parent div
+        $('#'+product_id+'_details').show();// show relevant child div
+    });
+    $('body').on('tap click', '.product_overlay', function(){
+        $('.product_overlay').hide();//hide relevant child div
+         $('.hidden_content').hide();//hide parent div
+    });
+    
 });
