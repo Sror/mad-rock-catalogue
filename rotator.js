@@ -23,10 +23,10 @@ $(document).ready(function(){
     
     for (i=0; i<rotator_list; i++){
         $('body').on('touchstart', i, function(){
-            myScroller.disable();
+            myScroll.disable();
         });
         $('body').on('touchend', i, function(){
-            myScroller.enable();
+            myScroll.enable();
         });
     };
 
