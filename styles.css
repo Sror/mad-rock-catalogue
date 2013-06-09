@@ -6,6 +6,7 @@ body {
     color: white;
 }
 
+/*
 .page h1,
 .page h2
 {
@@ -20,7 +21,7 @@ body {
     border: none;
     border-bottom: solid 1px #FFFFFF;
 }
-
+*/
 .frame {
     position:absolute;
     top:0px;
@@ -28,8 +29,6 @@ body {
     bottom:0px;
     left:0px;
     background-color: #F1F2F2;
-    /*border: 1px solid #BCBEC0;
-    border-radius: 4px;*/
 }
 
 
@@ -60,19 +59,6 @@ left: 20%;
 width: 60%;
 height: 10%;
 }
-.zoom_container
-{
-position: relative;
-height: 300px;
-width: 300px;
-overflow: hidden;
-}
-
-.wrapper_span_360sprite2
-{
-height: 327px;
-display: inline-block;
-}
 
 #pageWrapper {
     position:absolute;
@@ -85,6 +71,22 @@ display: inline-block;
     /*padding: 20px;/*my addition*/
 }
 
+.page {
+    float: left;
+    -webkit-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0px,0,0);
+    height: 100%;
+    background-color: black;
+}
+
+.scroller {
+	position:absolute;
+    z-index:1;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+	padding:0;
+}
+
 #wrapper_pg0, #wrapper_pg1, #wrapper_pg2, #wrapper_products_cover, #wrapper_pg4, #wrapper_pg5, #wrapper_pg6, #wrapper_pg7, #wrapper_pg8
 {
     position:absolute;
@@ -95,134 +97,6 @@ display: inline-block;
     right:0px;
     /*overflow:hidden;/*was overflow:auto;*/
 }
-
-/*Content, body and text*/
-.content_text
-{
-width: 95%;
-height:auto;
-position: relative;
-color: white;
-background-color: rgba(0,0,0,0.8);
-margin-top: 10px;
-margin-right: 10px;
-margin-left: 10px;
-margin-bottom: 50px;
-}
-.content_text>p
-{
-width:90%;
-margin: 10px;
-padding: 10px;
-}
-
-/* Hidden Content*/
-.hidden_content
-{
-display:none;
-}
-
-/*Products*/
-.product_list
-{
-list-style: none;
-/*line-height: 100px;*/
-}
-.product_list>li
-{
-margin: 5px;
-padding: 10px;
-border: 1px solid white;
-}
-.product_img_container
-{
-width:100%
-overflow: hidden;
-}
-.product_li_text
-{
-font-size: 250%;
-display: inline-block;
-}
-.product_img
-{
-max-width: 50%;
-height: auto;
-margin-left: auto;
-margin-right: auto;
-clear:both;
-/*float:left;*/
-}
-.product_overlay
-{
-position:absolute;
-top:0px;
-left:0px;
-width:100%;
-height:100%;
-z-index: 101;
-display: none;
-}
-.product_details
-{
-color: white;
-background-color: rgba(0,0,0,0.9);
-padding: 10px;
-}
-
-
-/*Image & Cover Handling*/
-.cover_img_container
-{
-position:relative;
-overflow: hidden;
-}
-.cover_img
-{
-position: absolute;
-top:0px;
-left: 0px;
-width:100%;
-z-index: 3
-}
-/*
-.cover_text
-{
-position: absolute;
-z-index: 3;
-top:15%;
-left:5%;
-background-color: rgba(0,0,0,0.2);
-padding: 10px;
-border-radius: 5px;
-}
-.cover_text>h2
-{
-color: black;
-}
-*/
-
-.supp_img_container
-{
-width: 100%;
-height: 150;/*250px;/*this needs to be set so that page scrolls to bottom*/
-display:inline-block;
-overflow: hidden;
-}
-.supp_img
-{
-width: 67%;
-margin-left: auto;
-margin-right:auto;
-}
-
-#pg_2_innovations
-{
-color:white;
-}
-
-
-/* PAGE 5 STYLES */
 
 #full_overlay
 {
@@ -241,28 +115,6 @@ top: 50px;
 left: 50px;
 z-index:102;
 background-color: rgba(0,0,0,0.9);
-}
-
-.page {
-    float: left;
-    -webkit-transform:translate3d(0,0,0);
-    -moz-transform:translate3d(0px,0,0);
-    height: 100%;
-    /*padding: 20px;*/
-    /*margin: 10px;/*my addition*/
-    /*border: 2px solid white;*//*border seems to disrupt widths and makes last slide disappear*/
-    background-color: black;/*my addition*/
-}
-
-
-/* #wrapper_pg5 included with the other wrapper divs */
-
-.scroller {
-	position:absolute;
-    z-index:1;
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
-	width:100%;
-	padding:0;
 }
 
     /* for cover width and height see js */
@@ -355,12 +207,6 @@ float: left;
 {
 float:right;
 }
-/*image with definite width and height for webkit*/
-.wh_img/*can adjust height in % as necessary maybe copy new classes for diferent pages*/
-{
-    max-width:100%;
-    height: 25%;
-}
 
 .margin-center
 {
@@ -445,6 +291,7 @@ height: auto;
 display: block;
 clear: both;
 }
+/*
 .fullw_auto>img
 {
 max-width: 100%;
@@ -453,6 +300,7 @@ max-width: 100%;
 {
 padding: 2%;
 }
+*/
 .col_left
 {
 width: 42.5%;
@@ -474,7 +322,23 @@ margin-bottom: 5%;
 float: left;
 }
 
+/*image with definite width and height for webkit*/
+.wh_img/*can adjust height in % as necessary maybe copy new classes for diferent pages*/
+{
+    max-width:100%;
+    height: 25%;
+}
 
+/* IMAGE DIMENSIONS BY ID - START*/
+
+    /*spinners need a pixel height*/
+
+#wrap_rotator_1_pg_5
+{
+height: 327px;
+}
+
+/* IMAGE DIMENSIONS BY ID - END*/
 
 
 

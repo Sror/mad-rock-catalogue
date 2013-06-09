@@ -21,13 +21,11 @@ $(document).ready(function(){
       });
     
     
-    for (i=0; i<rotator_list; i++){
-        $('body').on('touchstart', i, function(){
+        $('body').on('touchstart', '#rotator_1_pg_5', function(){
             myScroll.disable();
         });
-        $('body').on('touchend', i, function(){
+        $('body').on('touchend', '#rotator_1_pg_5', function(){
             myScroll.enable();
         });
-    };
 
 });
