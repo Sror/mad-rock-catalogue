@@ -20,12 +20,23 @@ $(document).ready(function(){
         preloadCss: "position: relative; display: block;"
       });
     
+    /*
+        $('body').on('touchstart mousedown', '#rotator_1_pg_5', function(){
+            alert('touchstart');
+            //myScroll.disable();
+        });
+        $('body').on('touchend mouseup', '#rotator_1_pg_5', function(){
+            //alert('touchend');
+            //myScroll.enable();
+        });
+    */
     
-        $('body').on('touchstart', '#rotator_1_pg_5', function(){
-            myScroll.disable();
-        });
-        $('body').on('touchend', '#rotator_1_pg_5', function(){
-            myScroll.enable();
-        });
-
+    $('#rotator_1_pg_5').on('touchstart mousedown', function(){
+        myScroll.disable();
+        console.log('touchstart spritespin');
+    });
+    $('#rotator_1_pg_5').on('touchend mouseup', function(){
+        myScroll.enable();
+    });
+    
 });

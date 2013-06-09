@@ -1,3 +1,5 @@
+var myScroll = "";
+
 $(document).ready(function(){//replaced with deviceready phonegap function
 
 $('.page').on('backbutton',
@@ -20,7 +22,7 @@ $cover_img_container.css('height', $(window).height());
 // The wrapperWidth before orientationChange. Used to identify the current page number in updateLayout();
 wrapperWidth = 0;
 
-var myScroll = new iScroll('pageWrapper', {
+myScroll = new iScroll('pageWrapper', {
 	snap: true,
 	momentum: false,
 	hScrollbar: false,
